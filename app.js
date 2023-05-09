@@ -6,8 +6,10 @@ const app = express();
 app.set("port", process.env.PORT || 3000);
 // app에 특정 값을 저장할떄
 
+app.use(express.static(path.join(__dirname, "/build")));
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.sendFile(path.join(__dirname, "/build/index.html"));
   // __dirname : 해당 파일이 존재하는 경로를 리턴함
 });
 
