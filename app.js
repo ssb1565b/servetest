@@ -13,5 +13,5 @@ app.get("/", (req, res) => {
 
 app.listen(app.get("port"), () => {
   // app.get("port") 이거가 사실 예전에는 PORT 이걸로 썼었음
-  console.log(app.get("port", "번 포트에서 배포 서버 실행"));
+  console.log(app.get("port"), "번 포트에서 배포 서버 실행");
 });
